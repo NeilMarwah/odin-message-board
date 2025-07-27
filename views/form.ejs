@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new message</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row wrap;
+        }
+
+        header {
+            width: 100%;
+            font-size: 1.5rem;
+            color: darkslategray;
+            text-transform: uppercase;
+            padding: 20px;
+            box-shadow: .5px .5px 20px #e4e4e4;
+        }
+
+        main {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-flow: row wrap;
+            margin-top: 100px;
+        }
+
+        #heading {
+            width: 70%;
+            font-size: 1.1rem;
+            text-transform: capitalize;
+            border-bottom: 1px solid #7de7ff;
+            padding-bottom: 10px;
+        }
+
+        form {
+            width: 70%;
+            padding: 10px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        label,
+        input,
+        textarea {
+            width: 100%;
+        }
+
+        label {
+            margin: 30px 0 5px 3px;
+            text-transform: capitalize;
+        }
+
+        input,
+        textarea {
+            border: none;
+            outline: none;
+            height: 40px;
+            border-radius: 10px;
+            box-shadow: .5px .5px 20px #e4e4e4;
+            font-size: 1rem;
+            padding: 2px 10px;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+            padding: 5px 10px;
+        }
+
+        button {
+            margin-top: 40px;
+            width: 120px;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: rgb(26, 106, 186);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Message Board</h1>
+    </header>
+    <main>
+        <div id="heading">add new message</div>
+        <form action="/new" method="post">
+            <label for="author">author</label>
+            <input type="text" name="author" required>
+
+            <label for="content">message</label>
+            <textarea name="content" required></textarea>
+
+            <button type="submit">submit</button>
+        </form>
+    </main>
+</body>
+
+</html>
